@@ -20,7 +20,7 @@ s3_output_path=args['S3_OUTPUT_PATH']
 print(s3_output_path)
 
 backup_df = spark.read.format("avro").load(s3_backup_path)
-backup_df.toPandas().to_csv(f"{s3_output_path}{table}.csv", sep="|", index=False)
+backup_df.toPandas().to_csv(f"{s3_output_path}{table}.csv", sep="|", index=False, header=False)
 
 
 job.commit()
