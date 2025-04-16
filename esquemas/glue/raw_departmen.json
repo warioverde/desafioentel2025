@@ -1,0 +1,12 @@
+[
+    {
+      "Name": "id",
+      "Type": "int",
+      "Comment": ""
+    },
+    {
+      "Name": "department",
+      "Type": "string",
+      "Comment": ""
+    }
+  ]

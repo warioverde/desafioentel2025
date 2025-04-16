@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "id",
+    "Type": "int"
+  },
+  {
+    "Name": "name",
+    "Type": "string"
+  },
+  {
+    "Name": "datetime",
+    "Type": "string"
+  },
+  {
+    "Name": "department_id",
+    "Type": "int"
+  },
+  {
+    "Name": "job_id",
+    "Type": "int"
+  }
+]
