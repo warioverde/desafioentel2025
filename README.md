@@ -27,7 +27,18 @@ Para abordar este ejercicio asumiré que el caso de uso es que por X motivo la i
 ![image](https://github.com/user-attachments/assets/8a1e5b85-f0a4-4c8c-9de7-969b93388c5a)
 
 
+## Parte 2
 
+### Números de empleados contratados para cada trabajo y departamento en 2021 dividido por trimestre. La tabla debe estar ordenada alfabéticamente por departamento y trabajo. 
+
+Para hacer esto por el momento cosulté la [clausula having](https://www.w3schools.com/sql/sql_having.asp), mi estrategia es separar mi problema en sqls incrementales, primero agrupé los IDs de department y jobs, luego, agregué la clausula having con el año 2021 apoyandome en la función split_part que encontré en [este post](https://repost.aws/questions/QUBlzpy8FwQkydFrVicWXOdQ/does-athena-support-split-function). Tras leer que se solicitaba separar esto por trimestre encontré este [post](https://stackoverflow.com/questions/29297084/sql-group-by-quarters) que me ayudó a entender que tengo que usar un case when, entonces, para implementarlo en Athena me apoyé en [este](https://www.w3schools.com/sql/sql_case.asp) y este [post](https://stackoverflow.com/questions/64803615/how-could-i-use-sql-case-when-correctly-in-athena), tras lo cúal obtuve un SQL que entregaba un "1" o un "0" dependiendo del trimestre. Agregué joins para traer los nombres de jobs y departments y finalmente los agrupé y sumé. Para validar que me trajera las columnas de departamento y trabajo ordenadas alfabéticamente, consulté este [post](https://learnsql.es/blog/una-guia-detallada-de-sql-order-by/) llegando al resultado esperado. Dejaré el SQL en la carpeta sql_parte_2/pregunta1.sql
+![image](https://github.com/user-attachments/assets/38977dc4-d63f-4484-9fc8-4694c1042c80)
+
+### Listado de ids, nombres y números de empleados contratados por cada departamento que haya contratado más empleados que la media de empleados contratados en 2021 para todos los departamentos, ordenados por número de empleados contratados (descendiente)
+
+primero sacaré el promedio o media de todos los empleados contratados por departamento. Ví que existen empleados que no tienen departamento asignado así que los tengo que descartar. Tras varios intentos me he perdido en la pregunta, leo la tabla output y me sale una columna ID pero con filas de tipo string. Por otro lado la pregunta solicita Id, nombres y números de contratados por departamento. A lo que logré llegar a una query que creo, interpretaba lo que solicitaba la pregunta. Me apoyé en los siguientes [post](https://www.w3schools.com/sql/sql_avg.asp), [post]([https://stackoverflow.com/questions/18362145/using-aggregate-function-in-where-clause-and-a-different-column-criteria](https://learnsql.com/blog/sql-avg-examples/)) [post](https://www.w3schools.com/sql/sql_join_inner.asp).
+Dejaré mi query en el apartado sql_parte_2/pregunta2.sql
+![image](https://github.com/user-attachments/assets/03059861-2e1c-43c4-b469-5de14f73525c)
 
 
 
