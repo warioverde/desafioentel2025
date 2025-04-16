@@ -38,7 +38,8 @@ Para hacer esto por el momento cosulté la [clausula having](https://www.w3schoo
 
 primero sacaré el promedio o media de todos los empleados contratados por departamento. Ví que existen empleados que no tienen departamento asignado así que los tengo que descartar. Tras varios intentos me he perdido en la pregunta, leo la tabla output y me sale una columna ID pero con filas de tipo string. Por otro lado la pregunta solicita Id, nombres y números de contratados por departamento. A lo que logré llegar a una query que creo, interpretaba lo que solicitaba la pregunta. Me apoyé en los siguientes [post](https://www.w3schools.com/sql/sql_avg.asp), [post]([https://stackoverflow.com/questions/18362145/using-aggregate-function-in-where-clause-and-a-different-column-criteria](https://learnsql.com/blog/sql-avg-examples/)) [post](https://www.w3schools.com/sql/sql_join_inner.asp).
 Dejaré mi query en el apartado sql_parte_2/pregunta2.sql
-![image](https://github.com/user-attachments/assets/03059861-2e1c-43c4-b469-5de14f73525c)
+![image](https://github.com/user-attachments/assets/849cd7c9-d892-4287-a795-aef7e766766a)
+
 
 
 
